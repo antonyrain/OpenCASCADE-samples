@@ -61,8 +61,8 @@ int main(int argc, char *argv[])
     Points2.SetValue( 2, gp_Pnt(0, 7, 5) );
     Points2.SetValue( 3, gp_Pnt(0, 6, 3) );
     Points2.SetValue( 4, gp_Pnt(0, 5, 0) );
-
-	Handle_Geom_Curve bezierCurve1 = new Geom_BezierCurve(Points1);
+    
+    Handle_Geom_Curve bezierCurve1 = new Geom_BezierCurve(Points1);
     Handle_Geom_Curve bezierCurve2 = new Geom_BezierCurve(Points2);
 
     // Geting coordimates of points on bezierCurve1
@@ -70,21 +70,21 @@ int main(int argc, char *argv[])
     TColgp_HSequenceOfPnt pSeq2;
     Standard_Integer NbPoints = 15;
     Standard_Real param;
-	gp_Pnt p;
+    gp_Pnt p;
 
     GeomAdaptor_Curve C (bezierCurve1);
     GCPnts_UniformAbscissa myAlgo1(C, NbPoints);
     myAlgo1.Initialize (C, NbPoints);
     if (myAlgo1.IsDone())
     {
-		Standard_Integer nbr = myAlgo1.NbPoints();
-		for (Standard_Integer i = 1; i <= nbr; i++)
-		{
-			param = myAlgo1.Parameter(i);
-			C.D0(param, p);
+        Standard_Integer nbr = myAlgo1.NbPoints();
+        for (Standard_Integer i = 1; i <= nbr; i++)
+        {
+            param = myAlgo1.Parameter(i);
+            C.D0(param, p);
             pSeq1.Append(p);
-		}
-	}
+        }
+    }
 
     // Geting coordimates of points on bezierCurve2
     GeomAdaptor_Curve D (bezierCurve2);
@@ -92,14 +92,14 @@ int main(int argc, char *argv[])
     myAlgo2.Initialize (D, NbPoints);
     if (myAlgo2.IsDone())
     {
-		Standard_Integer nbr = myAlgo2.NbPoints();
-		for (Standard_Integer i = 1; i <= nbr; i++)
-		{
-			param = myAlgo2.Parameter(i);
-			D.D0(param, p);
-			pSeq2.Append(p);
-		}
-	}
+        Standard_Integer nbr = myAlgo2.NbPoints();
+        for (Standard_Integer i = 1; i <= nbr; i++)
+        {
+            param = myAlgo2.Parameter(i);
+            D.D0(param, p);
+            pSeq2.Append(p);
+        }
+    }
 
     for(Standard_Integer i = pSeq1.Length(); i > 0; i--)
     {
@@ -130,12 +130,12 @@ int main(int argc, char *argv[])
     // Create a cylinder 
     Standard_Real X = 0, Y = -25, Z = 0; 
     gp_Ax2 axes = gp::ZOX(); 
-    axes.Translate(gp_Vec(X,Y,Z)); 
-	TopoDS_Shape aCylinder = BRepPrimAPI_MakeCylinder(axes,10.0,50.0, 90);
+    axes.Translate(gp_Vec(X,Y,Z));
+    TopoDS_Shape aCylinder = BRepPrimAPI_MakeCylinder(axes,10.0,50.0, 90);
 
     // Cut the cylinder out from the shape
     BRepAlgoAPI_Cut cutMaker(aResult, aCylinder);
-	TopoDS_Shape cutted = cutMaker.Shape();
+    TopoDS_Shape cutted = cutMaker.Shape();
 
     Standard_Real myThickness = -0.7;
     BRepOffsetAPI_MakeThickSolid aSolidMaker;
@@ -149,8 +149,8 @@ int main(int argc, char *argv[])
 
     try
     {
-    StlAPI_Writer writer;
-    writer.Write(theSolid, "model.stl");
+        StlAPI_Writer writer;
+        writer.Write(theSolid, "ring.stl");
     }catch(Standard_ConstructionError& e)
     {
         std::cout << e.GetMessageString() << std::endl;

@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
         cout << "Type is " << type << " - TopAbs_SHAPE" << endl;
         break;
     }
-
-	return 0;
+    
+    return 0;
 }
 
 // enum TopAbs_ShapeEnum:

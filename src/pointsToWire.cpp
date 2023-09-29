@@ -23,6 +23,6 @@ int main(int argc, char *argv[])
     TopoDS_Edge anEdge2 = BRepBuilderAPI_MakeEdge(V3,V4);
 
     TopoDS_Wire aWire = BRepBuilderAPI_MakeWire(anEdge1, anEdge2);
-	
-	return 0;
+    
+    return 0;
 }

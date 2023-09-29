@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-  	//Create a bezier surface from control points
+	//Create a bezier surface from control points
 	TColgp_Array2OfPnt controlPoints(1,3,1,3);
 
 	controlPoints.SetValue(1,1,gp_Pnt(-5.0,-5.0,0.0));

@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     gp_Circ baseCircle(gp_Ax2(aPnt,zDir),aRadius);
     
     Handle(Geom_TrimmedCurve) anArcOfCircle;
-	anArcOfCircle = new Geom_TrimmedCurve(new Geom_Circle(baseCircle),0,M_PI_2);
-	
-	return 0;
+    anArcOfCircle = new Geom_TrimmedCurve(new Geom_Circle(baseCircle),0,M_PI_2);
+    
+    return 0;
 }

@@ -190,8 +190,8 @@ int main(int argc, char *argv[])
 
     try
     {
-    StlAPI_Writer writer;
-    writer.Write(stepShape, "model.stl");
+        StlAPI_Writer writer;
+        writer.Write(stepShape, "model.stl");
     }catch(Standard_ConstructionError& e)
     {
         std::cout << e.GetMessageString() << std::endl;

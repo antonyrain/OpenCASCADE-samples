@@ -1,6 +1,6 @@
 # Makefile -- makefile tells make how to compile and link a program.
 
-SOURCE_FILE		:= ./src/bottleTutorial.cpp
+SOURCE_FILE		:= ./src/ring.cpp
 OUT_FILE		:= -o./bin/a.out
 INCLUDE_PATH	:= -I/usr/local/Cellar/opencascade/7.7.2_1/include/opencascade
 LIB_PATH		:= -L/usr/local/Cellar/opencascade/7.7.2_1/lib

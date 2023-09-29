@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     Handle(Geom_BSplineCurve) hBSpline;
     try
     {
-    hBSpline = new Geom_BSplineCurve(Poles, Knots, Mults, Degree);
+        hBSpline = new Geom_BSplineCurve(Poles, Knots, Mults, Degree);
     }catch(Standard_ConstructionError& e)
     {
         std::cout << e.GetMessageString() << std::endl;

@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     Handle(Geom_BSplineCurve) hBSpline;
     try
     {
-    hBSpline = new Geom_BSplineCurve(Poles, Knots, Mults, Degree);
+        hBSpline = new Geom_BSplineCurve(Poles, Knots, Mults, Degree);
     }catch(Standard_ConstructionError& e)
     {
         std::cout << e.GetMessageString() << std::endl;
@@ -51,11 +51,10 @@ int main(int argc, char *argv[])
         {
             param = myAlgo.Parameter(i);
             C.D0(myAlgo.Parameter(i), p);
-            //
+
             std::cout << "Point coordinates:" << std::endl;
             std::cout << p.X() << " " << p.Y() << " " << p.Z() << std::endl;
         }
-        //
         std::cout << "Abscissa:" << std::endl;
         std::cout <<  myAlgo.Abscissa() << std::endl;
 

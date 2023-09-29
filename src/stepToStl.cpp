@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
 
     try
     {
-    StlAPI_Writer writer;
-    writer.Write(stepShape,argv[2]);
+        StlAPI_Writer writer;
+        writer.Write(stepShape,argv[2]);
     }
     catch(Standard_ConstructionError& e)
     {
