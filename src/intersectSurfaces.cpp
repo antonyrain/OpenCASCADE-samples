@@ -1,18 +1,18 @@
 #include <iostream>
 
-#include "TopoDS.hxx";
-#include "TopoDS_Wire.hxx";
-#include "TopoDS_Face.hxx";
-#include "gp_Circ.hxx";
-#include "Geom_Circle.hxx";
-#include "BRepBuilderAPI_MakeEdge.hxx";
-#include "BRepBuilderAPI_MakeWire.hxx";
-#include "BRepBuilderAPI_MakeFace.hxx";
-#include "TColgp_Array1OfPnt.hxx";
-#include "Geom_BezierCurve.hxx";
-#include "GeomFill_Pipe.hxx";
-#include "BRepAdaptor_Surface.hxx";
-#include "GeomAPI_IntSS.hxx";
+#include "TopoDS.hxx"
+#include "TopoDS_Wire.hxx"
+#include "TopoDS_Face.hxx"
+#include "gp_Circ.hxx"
+#include "Geom_Circle.hxx"
+#include "BRepBuilderAPI_MakeEdge.hxx"
+#include "BRepBuilderAPI_MakeWire.hxx"
+#include "BRepBuilderAPI_MakeFace.hxx"
+#include "TColgp_Array1OfPnt.hxx"
+#include "Geom_BezierCurve.hxx"
+#include "GeomFill_Pipe.hxx"
+#include "BRepAdaptor_Surface.hxx"
+#include "GeomAPI_IntSS.hxx"
 
 
 int main(int argc, char *argv[])

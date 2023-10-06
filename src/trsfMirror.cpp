@@ -1,11 +1,11 @@
 #include <iostream>
 
-#include "gp.hxx";
-#include "gp_Ax2.hxx";
-#include "gp_Trsf.hxx";
-#include "TopoDS_Shape.hxx";
-#include "BRepPrimAPI_MakeCylinder.hxx";
-#include "BRepBuilderAPI_Transform.hxx";
+#include "gp.hxx"
+#include "gp_Ax2.hxx"
+#include "gp_Trsf.hxx"
+#include "TopoDS_Shape.hxx"
+#include "BRepPrimAPI_MakeCylinder.hxx"
+#include "BRepBuilderAPI_Transform.hxx"
 
 
 int main(int argc, char *argv[])
